@@ -1,0 +1,63 @@
+.tutorials {
+    padding-top: 164px;
+    padding-bottom: 109px;
+    font-family: 'Montserrat';
+    text-align: center;
+
+    &__title {
+        margin-bottom: 115px;
+        position: relative;
+        font-size: 38px;
+        font-weight: 500;
+        color: #222222;
+        text-transform: uppercase;
+
+        &-letter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.18;
+            font-family: 'Roboto', sans-serif;
+            font-size: 247px;
+            color: #222222;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 76px;
+        font-size: 30px;
+        color: #222222;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        max-width: $page-width;
+    }
+}
+
+.tutorial {
+    &__image {
+        margin-bottom: 44px;
+        width: 270px;
+        height: 280px;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #11749e;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 15px;
+        color: #222222;
+        line-height: 24px;
+        max-width: 258px;
+    }
+}

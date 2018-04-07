@@ -1,0 +1,86 @@
+.header {
+    margin-bottom: 273px;
+    padding: 22px 0 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        width: $page-width;
+    }
+
+    &__logo {
+        margin-right: 243px;
+        width: 79px;
+        height: 75px;
+        background: url('../img/4-layers.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.menu {
+    margin-right: 54px;
+    font-family: 'PT Sans', sans-serif;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 46px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.socials {
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 26px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+
+        &._facebook {
+            width: 10px;
+            height: 20px;
+            background: url('../img/icons/facebook.png');
+        }
+
+        &._twitter {
+            width: 18px;
+            height: 15px;
+            background: url('../img/icons/twitter.png');
+        }
+
+        &._skype {
+            width: 18px;
+            height: 18px;
+            background: url('../img/icons/skype.png');
+        }
+
+        &._linkedin {
+            width: 18px;
+            height: 17px;
+            background: url('../img/icons/linkedin.png');
+        }
+    }
+}

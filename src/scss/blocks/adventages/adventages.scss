@@ -1,0 +1,67 @@
+.adventages {
+    padding-top: 155px;
+    padding-bottom: 153px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/adventages/adventages-bg.png');
+
+    &__wrapper {
+        max-width: $page-width;
+        margin: 0 auto;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+
+    &__information {
+        padding-top: 129px;
+    }
+}
+
+.information {
+    font-family: 'Montserrat';
+    max-width: 471px;
+
+    &__title {
+        margin-bottom: 41px;
+        font-size: 25px;
+        font-weight: 500;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        margin-bottom: 68px;
+        font-size: 15px;
+        color: #ffffff;
+        line-height: 24px;
+    }
+}
+
+.skills {
+    
+    &__list {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        font-weight: 500;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 13px 19px;
+        background-color: #11749e;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #106488;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}

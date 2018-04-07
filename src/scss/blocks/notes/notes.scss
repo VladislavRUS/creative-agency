@@ -1,0 +1,32 @@
+.notes {
+    padding-top: 131px;
+    padding-bottom: 156px;
+    background-color: #11749e;
+
+    &__list {
+        display: flex;
+        max-width: $page-width;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}
+
+.note {
+    display: flex;
+    font-family: 'Montserrat';
+    align-items: flex-start;
+
+    &__image {
+        margin-top: 6px;
+        margin-right: 34px;
+        width: 69px;
+        height: 60px;
+    }
+
+    &__description {
+        color: white;
+        font-size: 15px;
+        line-height: 24px;
+        max-width: 449px;
+    }
+}

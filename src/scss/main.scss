@@ -1,0 +1,24 @@
+@import 'node_modules/normalize.css/normalize';
+
+@import 'common/variables';
+@import 'fonts/fonts';
+@import 'blocks/home/home';
+@import 'blocks/features/features';
+@import 'blocks/header/header';
+@import 'blocks/intro/intro';
+@import 'blocks/extensions/extensions';
+@import 'blocks/tutorials/tutorials';
+@import 'blocks/notes/notes';
+@import 'blocks/adventages/adventages';
+@import 'blocks/team/team';
+@import 'blocks/contact/contact';
+@import 'blocks/geoposition/geoposition';
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}

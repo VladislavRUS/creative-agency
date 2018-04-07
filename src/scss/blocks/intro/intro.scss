@@ -1,0 +1,72 @@
+.intro {
+    font-family: 'Montserrat';
+    text-align: center;
+    
+    &__title {
+        margin-bottom: 36px;
+        font-size: 153px;
+        color: white;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        margin-bottom: 118px;
+        font-size: 25px;
+        font-weight: 500;
+        color: #11749e;
+        letter-spacing: 7.88px;
+        text-transform: uppercase;
+    }
+}
+
+.scroll {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 22px;
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &__circle {
+        margin-bottom: 112px;
+        position: relative;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 1px solid #808080;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 13px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background: url('../img/icons/circle-arrow.png');
+            animation-name: shake-arrow;
+            animation-duration: 0.6s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes shake-arrow {
+    form {
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+    }
+}
