@@ -7,7 +7,7 @@
 
 <body>
     <section class="home">
-        <header class="header">
+        <header class="header" id="home">
             <div class="header__wrapper">
                 <div class="header__logo">
                     <img src="./dist/img/4-layers.png" alt="Logo">
@@ -16,22 +16,22 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Home</a>
+                                <a href="#" class="menu__link" elem-id="home">Home</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Pages</a>
+                                <a href="#" class="menu__link" elem-id="pages">Pages</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Features</a>
+                                <a href="#" class="menu__link" elem-id="features">Features</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Extensions</a>
+                                <a href="#" class="menu__link" elem-id="extensions">Extensions</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Tutorials</a>
+                                <a href="#" class="menu__link" elem-id="tutorials">Tutorials</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Contact us</a>
+                                <a href="#" class="menu__link" elem-id="contact">Contact us</a>
                             </li>
                         </ul>
                     </nav>
@@ -54,9 +54,17 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="header__hamburger">
+                    <div class="hamburger">
+                        <div class="hamburger__top"></div>
+                        <div class="hamburger__middle"></div>
+                        <div class="hamburger__bottom"></div>
+                    </div>
+                </div>
             </div>
         </header>
-        <div class="intro">
+        <div class="intro" id="pages">
             <div class="intro__title">
                 Creatives
             </div>
@@ -71,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
         <div class="features__wrapper">
             <div class="features__title">
                 We Are An Awesome Agency
@@ -114,7 +122,7 @@
         </div>
     </section>
 
-    <section class="extensions">
+    <section class="extensions" id="extensions">
         <div class="extensions__row">
             <div class="extensions__content">
                 <div class="extension-content _left">
@@ -128,8 +136,8 @@
             </div>
             <div class="extensions__image _right"></div>
         </div>
-        <div class="extensions__row">
-                <div class="extensions__image _right"></div>
+        <div class="extensions__row _last">
+                <div class="extensions__image _left"></div>
                 <div class="extensions__content _right">
                     <div class="extension-content _right">
                         <div class="extension-content__date">Jan 4, 2016   |   In Culture</div>
@@ -143,7 +151,7 @@
             </div>
     </section>
 
-    <section class="tutorials">
+    <section class="tutorials" id="tutorials">
         <div class="tutorials__title">
             Let's blog
             <div class="tutorials__title-letter">b</div>
@@ -316,7 +324,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
 
         <div class="contact__wrapper">
             <div class="contact__title">
@@ -333,8 +341,10 @@
                         <input type="email" class="input" placeholder="Email">
                         <input type="tel" class="input" placeholder="Phone">
                     </div>
-  
-                    <textarea name="message" id="" cols="30" rows="10" class="textarea" placeholder="Message"></textarea>
+
+                    <div class="form__row">
+                        <textarea name="message" id="" cols="30" rows="10" class="textarea" placeholder="Message"></textarea>
+                    </div>
 
                     <button class="button" type="button">Submit</button>
                 </form>
@@ -345,6 +355,8 @@
         <iframe height="332" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOwg_06VPwokRYv534QaPC8g&key=AIzaSyDzzxuPqdlWxLYRoxLJ3MyDYrZgoCtXsDw"
             allowfullscreen></iframe>
     </section>
+
+    <script src="./dist/js/main.js"></script>
 </body>
 
 </html>

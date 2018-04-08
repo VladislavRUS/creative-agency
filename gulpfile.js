@@ -6,7 +6,10 @@ const wait = require('gulp-wait');
 
 const config = {
     js: {
-        src: './src/scripts/js/**/*.js',
+        src: [
+            'node_modules/jquery/dist/jquery.min.js',
+            './src/js/**/*.js'
+        ],
         dest: './dist/js/'
     },
     scss: {
@@ -33,6 +36,7 @@ gulp.task('js', () =>
     .pipe(wait(500))
     .pipe(concat('main.js'))
     .pipe(gulp.dest(config.js.dest))
+    .pipe(browserSync.stream())
 );
 
 gulp.task('sass', () =>

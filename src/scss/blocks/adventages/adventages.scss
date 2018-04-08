@@ -65,3 +65,26 @@
         }
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .content {
+        flex-wrap: wrap-reverse;
+        align-items: flex-start;
+        justify-content: center;
+
+        &__image {
+            padding: 10px;
+        }
+    }
+
+    .information {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .skills {
+        &__item {
+            display: block;
+        }
+    }
+}

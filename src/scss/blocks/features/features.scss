@@ -88,3 +88,25 @@
         font-weight: 400;
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .features {
+        &__title {
+            padding: 0 20px;
+            font-size: 28px;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .feature {
+        padding: 0 20px;
+        
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}

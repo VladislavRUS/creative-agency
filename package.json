@@ -6,6 +6,7 @@
   "dependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "jquery": "^3.3.1",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {

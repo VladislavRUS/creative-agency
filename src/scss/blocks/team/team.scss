@@ -73,3 +73,22 @@
         color: #000000;
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .team {
+        &__subtitle {
+            font-size: 24px;
+            padding: 0 20px;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    .member {
+        padding: 60px;
+    }
+}

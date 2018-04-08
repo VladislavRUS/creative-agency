@@ -42,8 +42,6 @@
 .tutorial {
     &__image {
         margin-bottom: 44px;
-        width: 270px;
-        height: 280px;
     }
 
     &__title {
@@ -59,5 +57,35 @@
         color: #222222;
         line-height: 24px;
         max-width: 258px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .tutorials {
+
+        &__subtitle {
+            padding: 0 20px;
+        }
+        
+        &__list {
+            padding: 0 20px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    .tutorial {
+        max-width: 400px;
+        text-align: center;
+        padding: 20px 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &__description {
+            max-width: 100%;
+        }
     }
 }
