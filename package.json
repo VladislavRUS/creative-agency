@@ -1,30 +1,36 @@
 {
-  "name": "boileporate",
+  "name": "creative-agency",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
     "jquery": "^3.3.1",
+    "browser-sync": "^2.23.6",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
+    "run-sequence": "^2.2.1",
     "normalize.css": "^8.0.0"
   },
-  "devDependencies": {
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.0",
-    "gulp-wait": "0.0.2"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp prod"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VladislavRUS/boilerplate.git"
+    "url": "git+https://github.com/VladislavRUS/creative-agency.git"
   },
   "author": "Vladislav Kurochkin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VladislavRUS/boilerplate/issues"
+    "url": "https://github.com/VladislavRUS/creative-agency/issues"
   },
-  "homepage": "https://github.com/VladislavRUS/boilerplate#readme"
+  "homepage": "https://github.com/VladislavRUS/creative-agency#readme"
 }

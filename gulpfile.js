@@ -1,32 +1,20 @@
+const config = require('./gulp/config.js');
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const runSequence = require('run-sequence');
 const wait = require('gulp-wait');
 
-const config = {
-    js: {
-        src: [
-            'node_modules/jquery/dist/jquery.min.js',
-            './src/js/**/*.js'
-        ],
-        dest: './dist/js/'
-    },
-    scss: {
-        src: './src/scss/main.scss',
-        dest: './dist/styles/'
-    },
-    img: {
-        src: './src/img/**',
-        dest: './dist/img/'
-    }
-}
-
-// Static server
 gulp.task('browser-sync', () =>
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./static"
         }
     })
 );
@@ -36,10 +24,21 @@ gulp.task('js', () =>
     .pipe(wait(500))
     .pipe(concat('main.js'))
     .pipe(gulp.dest(config.js.dest))
-    .pipe(browserSync.stream())
 );
 
-gulp.task('sass', () =>
+gulp.task('js:prod', () =>
+    gulp.src(config.js.src)
+    .pipe(concat('main.js'))
+    .pipe(minify({
+        ext:{
+            min:'.js'
+        }
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.js.prodDest))
+);
+
+gulp.task('scss', () =>
     gulp.src(config.scss.src)
     .pipe(wait(500))
     .pipe(sass().on('error', sass.logError))
@@ -47,18 +46,42 @@ gulp.task('sass', () =>
     .pipe(browserSync.stream())
 );
 
-gulp.task('img', () => 
-    gulp.src(config.img.src)
-    .pipe(gulp.dest(config.img.dest))
+gulp.task('scss:prod', () =>
+    gulp.src(config.scss.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(config.scss.prodDest))
+    .pipe(browserSync.stream())
+);
+
+gulp.task('html:prod', () => 
+    gulp.src(config.html.src)
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(config.html.prodDest))
 );
 
 gulp.task('watch', () => {
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
-    gulp.watch('./src/js/**/*.js', ['js']);
-    gulp.watch(config.img.src, ['img']);
-    gulp.watch('./index.html', browserSync.reload);
+    gulp.watch(config.scss.watch, ['scss']);
+    gulp.watch(config.js.watch, ['js']);
+    gulp.watch(config.html.watch, browserSync.reload);
 });
 
-gulp.task('prepare', ['sass', 'js', 'img']);
+gulp.task('assets:prod', () => 
+    gulp.src(config.assets.src)
+    .pipe(gulp.dest(config.assets.prodDest))
+);
 
-gulp.task('default', ['prepare', 'watch', 'browser-sync']);
+gulp.task('images:prod', () =>
+    gulp.src(config.images.src)
+    .pipe(imagemin({
+        progressive: true,
+        optimizationLevel: 5,
+    }))
+    .pipe(gulp.dest(file => file.base))
+);
+
+gulp.task('prod', (done) => 
+    runSequence(['js:prod', 'scss:prod', 'html:prod'], 'assets:prod', 'images:prod', done)
+);
+
+gulp.task('default', ['js', 'scss', 'watch', 'browser-sync']);

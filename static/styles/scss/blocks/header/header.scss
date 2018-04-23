@@ -13,7 +13,7 @@
         margin-right: 243px;
         width: 79px;
         height: 75px;
-        background: url('../img/4-layers.png');
+        background: url('../assets/images/4-layers.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -142,25 +142,25 @@
         &._facebook {
             width: 10px;
             height: 20px;
-            background: url('../img/icons/facebook.png');
+            background: url('../assets/images/icons/facebook.png');
         }
 
         &._twitter {
             width: 18px;
             height: 15px;
-            background: url('../img/icons/twitter.png');
+            background: url('../assets/images/icons/twitter.png');
         }
 
         &._skype {
             width: 18px;
             height: 18px;
-            background: url('../img/icons/skype.png');
+            background: url('../assets/images/icons/skype.png');
         }
 
         &._linkedin {
             width: 18px;
             height: 17px;
-            background: url('../img/icons/linkedin.png');
+            background: url('../assets/images/icons/linkedin.png');
         }
     }
 }
